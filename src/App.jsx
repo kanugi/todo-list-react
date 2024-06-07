@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Todos from '../components/Todos'
 
 function App(){
   const [todos, setTodos] = useState([
@@ -27,28 +28,9 @@ function App(){
   return (
     <div>
       <h1>My Todo List</h1>
-      {todos.map((todo) =>{
-        return <p key={todo.id}>{todo.title}</p>
-      })}
+      <Todos todos={todos}/>
     </div>
   )
-}
-
-// const App = () => {
-//   const [count, setCount] = useState(0)
-
-//   const handleClick = () => {
-//     setCount(count + 1);
-//   }
-
-//   return (
-
-//     <div>
-//       <h1>{count}</h1>
-//       <button onClick={() => {handleClick()}}>+</button>
-//     </div>
-//   );
-// }
-  
+}  
 
 export default App
