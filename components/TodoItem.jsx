@@ -1,6 +1,5 @@
 import React from 'react'
 
-// tambahkan params deleteTodo
 const TodoItem = ({ todo, toggleCompleted, deleteTodo }) => {
   const getTodoTitleStyle = () => {
     if (todo.completed === true) {
@@ -10,7 +9,6 @@ const TodoItem = ({ todo, toggleCompleted, deleteTodo }) => {
     }
   }
 
-  // Tambahkan fungsi handleDelete 
   const handleDelete = () => {
     deleteTodo(todo.id)
   }
@@ -23,7 +21,6 @@ const TodoItem = ({ todo, toggleCompleted, deleteTodo }) => {
       onChange={() => toggleCompleted(todo.id)} 
       />
       <p style={getTodoTitleStyle()}>{todo.title}</p>
-      {/* Tambahkan onclick untuk delete */}
       <button style={styles.button} onClick={handleDelete}>x</button>
     </div>
   )

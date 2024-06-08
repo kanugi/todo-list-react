@@ -1,7 +1,6 @@
 import React from 'react'
 import TodoItem from './TodoItem'
 
-// Tambahkan parameter deleteTodo
 const Todos = ({ todos, toggleCompleted, deleteTodo }) => {
   return (
     <div style={styles.container}>
@@ -10,7 +9,6 @@ const Todos = ({ todos, toggleCompleted, deleteTodo }) => {
         key={todo.id} 
         todo={todo} 
         toggleCompleted={toggleCompleted}
-        // Tambahkan property deleteTodo
         deleteTodo={deleteTodo}
         />
       })}
