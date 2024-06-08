@@ -34,10 +34,18 @@ function App(){
     setTodos(updatedTodos)
   }
 
+  // fungsi filter untuk delete todo
+  const deleteTodo = (todoid)  => {
+    const newTodos = todos.filter(todo => todo.id !== todoid)
+    setTodos(newTodos);
+  }
+
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>My Todo List</h1>
-      <Todos todos={todos} toggleCompleted={toggleCompleted}/>
+      <Todos todos={todos} toggleCompleted={toggleCompleted}
+      // Tambahkan parameter deleteTodo
+      deleteTodo={deleteTodo}/>
     </div>
   )
 }  
