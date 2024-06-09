@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { TodoContext } from '../src/App'
 
-const TodoItem = ({ todo, toggleCompleted, deleteTodo }) => {
+const TodoItem = ({ todo }) => {
+  
+  const { toggleCompleted, deleteTodo } = useContext(TodoContext)
   const getTodoTitleStyle = () => {
     if (todo.completed === true) {
-      return { textDecoration: 'line-through' }
+      return { textDecoration: 'line-through', color: '#f35246' }
     } else {
       return { textDecoration: 'none' }
     }
@@ -29,7 +32,7 @@ const TodoItem = ({ todo, toggleCompleted, deleteTodo }) => {
 
 const styles = {
   todoItem: {
-    border: '2px solid #f4f4f4',
+    border: '2px dashed #f4f4f4',
     fontSize: '24px',
     display: 'flex',
     justifyContent: 'space-between',
@@ -38,14 +41,15 @@ const styles = {
   },
   checkbox: {
     marginRight: '16px',
-    height: '18px',
-    width: '18px',
+    height: '19px',
+    width: '19px',
+    cursor: 'pointer',
   },
   button: {
     backgroundColor: '#BB0000',
     color: '#fff',
-    height: '30px',
-    width: '30px',
+    height: '25px',
+    width: '25px',
     borderRadius: '100%',
     border: 'none',
     cursor: 'pointer',

@@ -1,0 +1,15 @@
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 36px;
+  color: rgb(158, 239, 254);
+}
+
+body {
+  background-color: #1a2134;
+}
+
+p {
+  color: aliceblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}

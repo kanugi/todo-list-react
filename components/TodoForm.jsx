@@ -46,14 +46,23 @@ const styles = {
     marginBottom: '32px',
   },
   formInput: {
-    height: '66px',
-    width: '40%',
+    height: '50px',
+    width: '30%',
     fontSize: '16px',
     padding: '0 16px',
+    borderRadius: '10px',
+    boxShadow: '3px 3px #3d85c6',
   },
   button: {
-    height: '72px',
-    fontSize: '16px',
+    height: '53px',
+    fontSize: '15px',
+    fontWeight: 'bold',
+    color: 'black',
+    cursor: 'pointer',
+    borderRadius: '10px',
+    marginLeft: '20px',
+    backgroundColor: '#5dca88',
+    boxShadow: '2px 2px #1a7940',
   },
 }
 
