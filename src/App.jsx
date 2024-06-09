@@ -3,8 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import './index.css'
-import Todos from '../components/Todos'
-import TodoForm from '../components/TodoForm'
+import Todos from './components/Todos'
+import TodoForm from './components/TodoForm'
 
 export const TodoContext = createContext()
 
